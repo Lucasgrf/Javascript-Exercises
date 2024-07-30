@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Background</title>
+    <script>
+        function swiftToRed() {
+            event.preventDefault();
+            document.body.style.backgroundColor = "red";
+        }
+        function swiftToGreen() {
+            event.preventDefault();
+            document.body.style.backgroundColor = "green";
+        }
+        function swiftToBlue() {
+            event.preventDefault();
+            document.body.style.backgroundColor = "blue";
+        }
+        function swiftToYellow() {
+            event.preventDefault();
+            document.body.style.backgroundColor = "yellow";
+        }
+    </script>
+</head>
+<body>
+    <form id="form">
+        <h1>Escolha uma cor para o fundo da página:</h1>
+        <button class="botao1" onclick="swiftToRed()">Trocar fundo: Vermelho</button><br><br>
+        <button class="botao2" onclick="swiftToGreen()">Trocar fundo: Verde</button><br><br>
+        <button class="botao3" onclick="swiftToBlue()">Trocar fundo: Azul</button><br><br>
+        <button class="botao4" onclick="swiftToYellow()">Trocar fundo: Amarelo</button><br><br>
+    </form>
+</body>
+</html>

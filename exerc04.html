@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragrafo">Exercício 04</p>
+    <button id="botao" onclick="ocultarMostrar()">Ocultar</button>
+    <script>
+        function ocultarMostrar() {
+            var paragrafo = document.getElementById('paragrafo');
+            var button = document.getElementById('botao');
+            if (paragrafo.style.display == 'none') {
+                paragrafo.style.display = 'block';
+                button.textContent = 'Ocultar';
+            } else {
+                paragrafo.style.display = 'none';
+                button.textContent = 'Mostrar';
+            }
+        }
+    </script>
+</body>
+</html>

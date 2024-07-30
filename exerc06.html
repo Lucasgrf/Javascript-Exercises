@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 2</title>
+  <style>
+    #paragraph {
+      padding: 10px;
+    }
+  </style>
+  <script>
+    function changeTextColor(color) {
+      document.getElementById('paragraph').style.color = color;
+    }
+
+    function changeBackgroundColor(color) {
+      document.getElementById('paragraph').style.backgroundColor = color;
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <p id="paragraph">um parágrafo</p>
+    <button onclick="changeTextColor('blue')">Fonte Azul</button>
+    <button onclick="changeTextColor('red')">Fonte Vermelha</button>
+    <button onclick="changeBackgroundColor('cyan')">Fundo Ciano</button>
+    <button onclick="changeBackgroundColor('black')">Fundo Preto</button>
+  </div>
+</body>
+</html>

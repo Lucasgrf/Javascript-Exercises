@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 5</title>
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+      const login = document.getElementById('login').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      if (login && password && confirmPassword) {
+        if (password === confirmPassword && password.length >= 6 && password.length <= 10) {
+          alert('Formulário enviado com sucesso!');
+        } else {
+          alert('As senhas devem ser iguais e possuir entre 6 e 10 caracteres.');
+        }
+      } else {
+        alert('Todos os campos devem ser preenchidos.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="validateForm(event)">
+    <label for="login">Login:</label>
+    <input type="text" id="login" required><br>
+
+    <label for="password">Senha:</label>
+    <input type="password" id="password" required><br>
+
+    <label for="confirm-password">Confirmar Senha:</label>
+    <input type="password" id="confirm-password" required><br>
+
+    <button type="submit">Registrar</button>
+  </form>
+</body>
+</html>

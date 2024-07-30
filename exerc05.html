@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1</title>
+  <script>
+    function toggleButton() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      const button = document.getElementById('submit-button');
+      button.disabled = checkboxes.length < 2;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label><input type="checkbox" name="item" onclick="toggleButton()"> Item 1</label><br>
+    <label><input type="checkbox" name="item" onclick="toggleButton()"> Item 2</label><br>
+    <label><input type="checkbox" name="item" onclick="toggleButton()"> Item 3</label><br>
+    <label><input type="checkbox" name="item" onclick="toggleButton()"> Item 4</label><br>
+    <button id="submit-button" type="submit" disabled>Submit</button>
+  </form>
+</body>
+</html>

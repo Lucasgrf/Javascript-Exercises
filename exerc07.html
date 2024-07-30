@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 3</title>
+  <style>
+    #paragraph {
+      padding: 10px;
+    }
+  </style>
+  <script>
+    function changeFontSize(amount) {
+      const paragraph = document.getElementById('paragrafo');
+      const currentSize = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+      const newSize = parseFloat(currentSize) + amount;
+      paragraph.style.fontSize = newSize + 'px';
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <p id="paragrafo">um parágrafo</p>
+    <button onclick="changeFontSize(2)">Aumentar Fonte</button>
+    <button onclick="changeFontSize(-2)">Diminuir Fonte</button>
+  </div>
+</body>
+</html>
